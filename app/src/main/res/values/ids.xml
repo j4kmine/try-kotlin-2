@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mainFrame" type="id"/>
+    <item name="bottomMenu" type="id"/>
+    <item name="NavigationBottom" type="id"/>
+    <item name="NextMatchId" type="id"/>
+    <item name="pastMatchId" type="id"/>
+    <item name="match_name" type="id"/>
+    <item name="match_date" type="id"/>
+    <item name="homeTeam" type="id"/>
+    <item name="awayTeam" type="id"/>
+    <item name="homeScore" type="id"/>
+    <item name="awayScore" type="id"/>
+    <item name="navigationAbove" type="id"/>
+    <item name="detailawayScore" type="id"/>
+    <item name="detailHomeScore" type="id"/>
+    <item name="detaillogoAway" type="id"/>
+    <item name="detaillogoHome" type="id"/>
+    <item name="detailawayGoal" type="id"/>
+    <item name="detailhomeGoal" type="id"/>
+    <item name="detailawayShoot" type="id"/>
+    <item name="detailhomeShoot" type="id"/>
+    <item name="detailhomeGoalKeeper" type="id"/>
+    <item name="detailawayGoalKeeper" type="id"/>
+    <item name="detailawayDefense" type="id"/>
+    <item name="detailhomeDefense" type="id"/>
+    <item name="detailawayMidfield" type="id"/>
+    <item name="detailhomeMidfield" type="id"/>
+    <item name="detailawayForward" type="id"/>
+    <item name="detailhomeForward" type="id"/>
+    <item name="detailawaySubstitutes" type="id"/>
+    <item name="detailhomeSubstitutes" type="id"/>
+    <item name="homes" type="id"/>
+    <item name="aways" type="id"/>
+</resources>

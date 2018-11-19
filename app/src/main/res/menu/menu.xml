@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:title="Upcoming League"
+            android:enabled="true"
+            android:id="@+id/upcomingBtn"
+            android:icon="@drawable/upcoming"
+            app:showAsAction="ifRoom"
+    />
+    <item
+            android:title="Past Match"
+            android:enabled="true"
+            android:icon="@drawable/match"
+            android:id="@+id/pastBtn"
+            app:showAsAction="ifRoom"
+    />
+    <item
+            android:title="About Application"
+            android:enabled="true"
+            android:icon="@drawable/information"
+            android:id="@+id/aboutBtn"
+            app:showAsAction="ifRoom"
+    />
+</menu>
