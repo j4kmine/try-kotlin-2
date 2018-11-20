@@ -1,6 +1,7 @@
 package com.example.asus.scoring.match.pastmatch
 
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -15,7 +16,7 @@ class PastMatch : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return PastMathcUi().createView(AnkoContext.Companion.create(ctx,this))
+        return PastMathcUi().createView(AnkoContext.Companion.create(this@PastMatch.context as Context,this))
     }
 
 

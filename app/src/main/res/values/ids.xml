@@ -4,14 +4,11 @@
     <item name="bottomMenu" type="id"/>
     <item name="NavigationBottom" type="id"/>
     <item name="NextMatchId" type="id"/>
-    <item name="pastMatchId" type="id"/>
-    <item name="match_name" type="id"/>
     <item name="match_date" type="id"/>
     <item name="homeTeam" type="id"/>
     <item name="awayTeam" type="id"/>
     <item name="homeScore" type="id"/>
     <item name="awayScore" type="id"/>
-    <item name="navigationAbove" type="id"/>
     <item name="detailawayScore" type="id"/>
     <item name="detailHomeScore" type="id"/>
     <item name="detaillogoAway" type="id"/>

@@ -15,10 +15,17 @@
             app:showAsAction="ifRoom"
     />
     <item
+            android:title="Favorite Event"
+            android:enabled="true"
+            android:icon="@drawable/love"
+            android:id="@+id/favoriteBtn"
+            app:showAsAction="ifRoom" />
+    <item
             android:title="About Application"
             android:enabled="true"
             android:icon="@drawable/information"
             android:id="@+id/aboutBtn"
-            app:showAsAction="ifRoom"
-    />
+            app:showAsAction="ifRoom"/>
+
+
 </menu>

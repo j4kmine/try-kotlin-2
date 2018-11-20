@@ -7,6 +7,7 @@ import android.support.design.widget.TabLayout
 import android.support.v7.app.AppCompatActivity
 import com.example.asus.scoring.R
 import com.example.asus.scoring.info.InfoFragment
+import com.example.asus.scoring.match.favoritematch.FavoriteTeams
 import com.example.asus.scoring.match.nextmatch.NextMatch
 import com.example.asus.scoring.match.pastmatch.PastMatch
 import org.jetbrains.anko.find
@@ -34,12 +35,24 @@ class MainActivity : AppCompatActivity() {
                     loadFragmentAbout(savedInstanceState)
                     supportActionBar?.title ="About Premier League"
                 }
+                R.id.favoriteBtn->{
+                    loadFragmentFavorite(savedInstanceState)
+                    supportActionBar?.title ="Favorite Team"
+                }
 
             }
             true
         }
 
         bottomNavigationView.selectedItemId = R.id.upcomingBtn
+    }
+    private fun loadFragmentFavorite(savedInstanceState: Bundle?){
+        if(savedInstanceState == null){
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.mainFrame, FavoriteTeams())
+                .commit()
+        }
     }
     private fun loadFragmentAbout(savedInstanceState: Bundle?){
         if(savedInstanceState == null){

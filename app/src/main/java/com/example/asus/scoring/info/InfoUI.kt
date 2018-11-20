@@ -13,7 +13,7 @@ class InfoUI:AnkoComponent<InfoFragment>{
                 text ="Premier League"
                 textSize = 30f
 
-            }.lparams(){
+            }.lparams {
                 padding =30
             }
             textView {

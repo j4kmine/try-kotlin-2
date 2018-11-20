@@ -1,6 +1,7 @@
 package com.example.asus.scoring.detail
 
 import android.view.Gravity
+import android.view.Menu
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -16,7 +17,8 @@ import com.squareup.picasso.Picasso
 import org.jetbrains.anko.*
 
 class DetailActivityUI(
-                        var _Home:String?=""
+                        var _IdEvent:String?=""
+                        ,var _Home:String?=""
                         ,var _Away:String?=""
                         ,var _intHomeScore:String?=""
                        ,var _intAwayScore:String?=""
@@ -55,6 +57,10 @@ class DetailActivityUI(
     lateinit var imageshome: ImageView
     lateinit var imagesaway: ImageView
     private lateinit var presenter: DetailPresenter
+    private var menuItem: Menu? = null
+    private var isFavorite: Boolean = false
+    var imgFixedHome:String? = null
+    var imgFixedAway:String? = null
     override fun createView(ui: AnkoContext<DetailActivity>): View = with(ui) {
         relativeLayout {
             progressBar =progressBar {
@@ -365,22 +371,55 @@ class DetailActivityUI(
 
                         }
                     }
-                    strHomeTeam.text = _Home
-                    strAwayTeam.text =_Away
-                    intHomeScore.text = _intAwayScore
-                    intAwayScore.text = _intHomeScore
-                    strHomeGoalDetails.text = _strHomeGoalDetails
-                    strAwayGoalDetails.text =_strAwayGoalDetails
-                    strHomeLineupGoalkeeper.text = _strHomeLineupGoalkeeper
-                    strHomeLineupDefense.text = _strHomeLineupDefense
-                    strHomeLineupMidfield.text = _strHomeLineupMidfield
-                    strHomeLineupForward.text = _strHomeLineupForward
-                    strHomeLineupSubstitutes.text = _strHomeLineupSubstitutes
-                    strAwayLineupGoalkeeper.text = _strAwayLineupGoalkeeper
-                    strAwayLineupDefense.text = _strAwayLineupDefense
-                    strAwayLineupMidfield.text = _strAwayLineupMidfield
-                    strAwayLineupForward.text =_strAwayLineupForward
-                    strAwayLineupSubstitutes.text =_strAwayLineupSubstitutes
+                    if( _Home != "null"){
+                        strHomeTeam.text = _Home
+                    }
+                    if( _Away != "null") {
+                        strAwayTeam.text = _Away
+                    }
+                    if(_intAwayScore != "null") {
+                        intHomeScore.text = _intAwayScore
+                    }
+                    if(_intHomeScore != "null") {
+                        intAwayScore.text = _intHomeScore
+                    }
+                    if(_strHomeGoalDetails != "null") {
+                        strHomeGoalDetails.text = _strHomeGoalDetails
+                    }
+                    if(_strAwayGoalDetails != "null") {
+                        strAwayGoalDetails.text =_strAwayGoalDetails
+                    }
+                    if(_strHomeLineupGoalkeeper != "null") {
+                        strHomeLineupGoalkeeper.text = _strHomeLineupGoalkeeper
+                    }
+                    if(_strHomeLineupDefense != "null") {
+                        strHomeLineupDefense.text = _strHomeLineupDefense
+                    }
+                    if(_strHomeLineupMidfield != "null") {
+                        strHomeLineupMidfield.text = _strHomeLineupMidfield
+                    }
+                    if(_strHomeLineupForward != "null") {
+                        strHomeLineupForward.text = _strHomeLineupForward
+                    }
+                    if(_strHomeLineupSubstitutes != "null") {
+                        strHomeLineupSubstitutes.text = _strHomeLineupSubstitutes
+                    }
+                    if(_strAwayLineupGoalkeeper != "null") {
+                        strAwayLineupGoalkeeper.text = _strAwayLineupGoalkeeper
+                    }
+                    if(_strAwayLineupDefense != "null") {
+                        strAwayLineupDefense.text = _strAwayLineupDefense
+                    }
+                    if(_strAwayLineupMidfield != "null") {
+                        strAwayLineupMidfield.text = _strAwayLineupMidfield
+                    }
+                    if(_strAwayLineupForward != "null") {
+                        strAwayLineupForward.text =_strAwayLineupForward
+                    }
+                    if(_strAwayLineupSubstitutes != "null") {
+                        strAwayLineupSubstitutes.text =_strAwayLineupSubstitutes
+                    }
+
 
                 }
                 val request = ApiRepository()
@@ -402,7 +441,7 @@ class DetailActivityUI(
     }
 
     override fun showImage(home: List<Team>, away: List<Team>) {
-        Picasso.get().load(home.component1().logo).into(imagesaway);
-        Picasso.get().load(away.component1().logo).into(imageshome);
+        Picasso.get().load(home.component1().logo).into(imagesaway)
+        Picasso.get().load(away.component1().logo).into(imageshome)
     }
 }

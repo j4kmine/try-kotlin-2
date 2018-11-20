@@ -64,6 +64,8 @@ class NextMatchUi:AnkoComponent<NextMatch>,MatchView{
     }
     private fun onclickme(event: Event,context: Context){
         val intent = Intent(context, DetailActivity::class.java)
+        intent.putExtra("idevent", event.idEvent)
+        intent.putExtra("dateevent", event.dateEvent)
         intent.putExtra("home", event.homeTeam)
         intent.putExtra("away", event.awayTeam)
         intent.putExtra("homescore", event.homeScore)
