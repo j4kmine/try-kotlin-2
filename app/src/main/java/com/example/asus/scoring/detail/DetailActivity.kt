@@ -28,6 +28,7 @@ class DetailActivity:AppCompatActivity(){
         super.onCreate(savedInstanceState)
         val intent = intent
         favoriteState()
+        setFavorite()
         DetailActivityUI(
             intent.getStringExtra("idevent"),
             intent.getStringExtra("home"),
@@ -132,6 +133,7 @@ class DetailActivity:AppCompatActivity(){
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.detail_menu, menu)
         menuItem = menu
+        setFavorite()
         return true
     }
 
