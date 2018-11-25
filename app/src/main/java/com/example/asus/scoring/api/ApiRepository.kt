@@ -2,11 +2,14 @@ package com.example.asus.scoring.api
 
 import android.net.Uri
 import com.example.asus.scoring.BuildConfig
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import java.net.URL
 
 class ApiRepository{
-    fun doRequest(url:String):String{
-        return URL(url).readText()
+    fun doRequest(url: String): Deferred<String> = GlobalScope.async {
+        URL(url).readText()
     }
     object TheSportApiDb{
         fun getMatchPast(league:String?):String{
